@@ -242,12 +242,13 @@ def call(
 
       stage('Run User Acceptance Tests (Maven)') {
         steps {
-          container('maven') {
-            sh """
-              source tssc/bin/activate
-              python -m tssc --config cicd/tssc-config.yml --step uat --environment ${environment}
-            """
-          } // container
+          echo '${STAGE_NAME}'
+          //container('maven') {
+          //  sh """
+          //    source tssc/bin/activate
+          //    python -m tssc --config cicd/tssc-config.yml --step uat --environment ${environment}
+          //  """
+          //} // container
         } // steps
       } // stage
 
