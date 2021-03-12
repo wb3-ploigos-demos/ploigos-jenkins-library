@@ -663,7 +663,8 @@ def call(Map paramsMap) {
                                     source ${HOME}/${WORKFLOW_WORKER_VENV_NAME}/bin/activate
                                     psr \
                                         --config ${PSR_CONFIG_ARG} \
-                                        --step create-container-image
+                                        --step create-container-image \
+					--tls-verify true
                                 """
                             }
                         }
